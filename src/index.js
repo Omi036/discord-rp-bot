@@ -1,6 +1,7 @@
 const { Client, GatewayIntentBits, Collection } = require("discord.js")
 const { loadCommands } = require("./core")
 const { loadEvents } = require("./core")
+const { createDatabase } = require("./core/database")
 
 require("dotenv").config()
 

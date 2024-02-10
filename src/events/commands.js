@@ -1,3 +1,4 @@
+const { Client, Collection } = require("discord.js");
 const { logError } = require("../core");
 
 module.exports = {
@@ -5,6 +6,12 @@ module.exports = {
     description:"On new command",
     enabled: true,
     type: "event",
+
+    /**
+     * 
+     * @param {Client} client 
+     * @param {Collection<Command>} commands 
+     */
     execute: function(client, commands) {
         client.on("interactionCreate", async interaction => {
             if (!interaction.isChatInputCommand()) return;
